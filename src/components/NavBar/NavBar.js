@@ -14,9 +14,15 @@ const NavBar = () => {
                     isActive ? "md:bg-red-400 md:text-white rounded-xl" : undefined
                     }>Home
                     </NavLink>
-                    <NavLink to={'/topics'}>Topics</NavLink>
-                    <NavLink to={'/statistics'}>Statistics</NavLink>
-                    <NavLink to={'/blog'}>Blog</NavLink>
+                    <NavLink to={'/topics'} className={({ isActive }) =>
+                    isActive ? "md:bg-red-400 md:text-white rounded-xl" : undefined
+                    }>Topics</NavLink>
+                    <NavLink to={'/statistics'} className={({ isActive }) =>
+                    isActive ? "md:bg-red-400 md:text-white rounded-xl" : undefined
+                    }>Statistics</NavLink>
+                    <NavLink to={'/blog'} className={({ isActive }) =>
+                    isActive ? "md:bg-red-400 md:text-white rounded-xl" : undefined
+                    }>Blog</NavLink>
             </nav>
         </div>
     );
