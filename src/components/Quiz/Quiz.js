@@ -30,7 +30,7 @@ const Quiz = ({quiz, countWrong, setCountWrong, countCorrect, setCountCorrect}) 
     return (
         <div>
             <div className='border-2 bg-red-100 border-red-400 p-16 m-24 rounded-xl'>
-                <h4 className='text-xl font-medium pb-5'>Quiz:{quiz.question}</h4>
+                <h4 className='text-xl font-medium pb-5'>Quiz{}:{quiz.question}</h4>
 
                 <FontAwesomeIcon onClick={() => showCorrectAnswer(quiz.correctAnswer)} className='text-xl text-red-600' icon={faEye} />
             

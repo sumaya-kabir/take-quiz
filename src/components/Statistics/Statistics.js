@@ -16,7 +16,7 @@ const Statistics = () => {
               <YAxis dataKey="total"/>
               <Tooltip />
             </LineChart>
-      ;
+      
         </div>
         </div>
     );
