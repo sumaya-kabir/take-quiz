@@ -1,4 +1,3 @@
-import React from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -7,7 +6,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const Quiz = ({quiz, countWrong, setCountWrong, countCorrect, setCountCorrect,index}) => {
     const correctNotify = () => toast("Yeah, You Choose The Correct Answer!");
     const wrongNotify = () => toast("Sorry, You Choose The Wrong Answer!");
-
 
     const handleClickAnswer = (ans) => {
         if(ans === quiz.correctAnswer){
@@ -33,7 +31,7 @@ const Quiz = ({quiz, countWrong, setCountWrong, countCorrect, setCountCorrect,in
                 <h4 className='text-xl font-medium pb-5'>Quiz {index + 1}:{quiz.question}</h4>
 
                 <FontAwesomeIcon onClick={() => showCorrectAnswer(quiz.correctAnswer)} className='text-xl text-red-600' icon={faEye} />
-            
+
                 <div className='grid grid-cols-1'>
                         <button 
                         onClick={() => handleClickAnswer(quiz.options[0])}
