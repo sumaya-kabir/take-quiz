@@ -14,9 +14,10 @@ const TopicQuiz = () => {
             <div className='text-center col-span-2'>
             <h2 className='text-3xl font-bold'>Quiz of {topicQuizes.data.name}</h2>
             {
-                quizes.map(quiz => <Quiz
+                quizes.map((quiz, index) => <Quiz
                 key={quiz.id}
                 quiz={quiz}
+                index={index}
                 countWrong={countWrong}
                 setCountWrong={setCountWrong}
                 countCorrect={countCorrect}
