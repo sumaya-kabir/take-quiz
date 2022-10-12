@@ -4,17 +4,19 @@ import 'react-toastify/dist/ReactToastify.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
   import { faEye } from '@fortawesome/free-solid-svg-icons';
 
-const Quiz = ({quiz}) => {
-    const rightNotify = () => toast("Yeah, You Choose The Right Answer!");
+const Quiz = ({quiz, countWrong, setCountWrong, countCorrect, setCountCorrect}) => {
+    const correctNotify = () => toast("Yeah, You Choose The Correct Answer!");
     const wrongNotify = () => toast("Sorry, You Choose The Wrong Answer!");
 
 
     const handleClickAnswer = (ans) => {
         if(ans === quiz.correctAnswer){
-            rightNotify();
+            correctNotify();
+            setCountCorrect(countCorrect + 1);
         } else {
             
             wrongNotify();
+            setCountWrong(countWrong + 1);
         }
     }
 
@@ -35,33 +37,30 @@ const Quiz = ({quiz}) => {
                 <div className='grid grid-cols-1'>
                         <button 
                         onClick={() => handleClickAnswer(quiz.options[0])}
-                        className='hover:bg-white text-lg font-bold text-red-400 border-2 border-red-400 rounded-xl px-5 py-3 my-3 md:mx-56'>
+                        className='hover:bg-white text-lg font-bold text-red-400 border-2 border-red-400 rounded-xl px-5 py-3 my-3 lg:mx-40'>
                         {quiz.options[0]}
                         </button>
                         
                         <button 
                         onClick={() => handleClickAnswer(quiz.options[1])}
-                        className='hover:bg-white text-lg font-bold text-red-400 border-2 border-red-400 rounded-xl px-5 py-3 my-3 md:mx-56'>
+                        className='hover:bg-white text-lg font-bold text-red-400 border-2 border-red-400 rounded-xl px-5 py-3 my-3 lg:mx-40'>
                         {quiz.options[1]}
                         </button>
 
                         <button
                         onClick={() => handleClickAnswer(quiz.options[2])}
-                        className='hover:bg-white text-lg font-bold text-red-400 border-2 border-red-400 rounded-xl px-5 py-3 my-3 md:mx-56'>
+                        className='hover:bg-white text-lg font-bold text-red-400 border-2 border-red-400 rounded-xl px-5 py-3 my-3 lg:mx-40'>
                         {quiz.options[2]}
                         </button>
 
                         <button 
                         onClick={() => handleClickAnswer(quiz.options[3])}
-                        className='hover:bg-white text-lg font-bold text-red-400 border-2 border-red-400 rounded-xl px-5 py-3 my-3 md:mx-56'>
+                        className='hover:bg-white text-lg font-bold text-red-400 border-2 border-red-400 rounded-xl px-5 py-3 my-3 lg:mx-40'>
                         {quiz.options[3]}
                         </button>
                         <ToastContainer />
                 </div>
             </div>
-        <div>
-
-        </div>
         </div>
     );
 };

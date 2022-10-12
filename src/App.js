@@ -46,12 +46,13 @@ function App() {
           path: '/blog',
           element: <Blog></Blog>,
         },
+        {
+          path: '*',
+          element: <NotFound></NotFound>,
+        }
       ]
     },
-    {
-      path: '*',
-      element: <NotFound></NotFound>,
-    }
+    
   ])
   return (
     <div>

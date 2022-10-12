@@ -10,7 +10,7 @@ const NavBar = () => {
             </div>
 
             <nav className='text-center nav-style text-xl font-semibold text-red-400 '>
-                    <NavLink to={'/'} className={({ isActive }) =>
+                    <NavLink to={'/'} end className={({ isActive }) =>
                     isActive ? "md:bg-red-400 md:text-white rounded-xl" : undefined
                     }>Home
                     </NavLink>

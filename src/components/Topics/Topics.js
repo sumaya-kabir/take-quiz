@@ -6,7 +6,7 @@ const Topics = () => {
     const topics = useLoaderData();
     return (
         <div>
-            <h2 className='text-center text-5xl mb-10'>All Topics Are Here</h2>
+            <h2 className='text-center md:text-5xl mb-10'>All Topics Are Here</h2>
             <div className='md:grid grid-cols-4'>
             {
                 topics.data.map(topic => <TopicCards
