@@ -24,7 +24,7 @@ const Blog = () => {
                 <bold className="font-semibold">Link:</bold> Link component is used to create links to different routes and implement navigation around the application. It works like HTML anchor tag.
                 </p>
             </article>
-            <article className='mb-10 border-2 border-red-400 rounded-xl p-10'>>
+            <article className='mb-10 border-2 border-red-400 rounded-xl p-10'>
                 <h3 className='text-4xl mb-6'>How does context api works?</h3>
                 <p>
                 The React Context API is a way for a React app to effectively produce global variables that can be passed around. This is the alternative to "prop drilling" or moving props from grandparent to child to parent, and so on.
@@ -32,11 +32,11 @@ const Blog = () => {
                 <br />
                 React.createContext() is all you need. It returns a consumer and a provider. Provider is a component that as it's names suggests provides the state to its children. It will hold the "store" and be the parent of all the components that might need that store. Consumer as it so happens is a component that consumes and uses the state. 
                 <br />
-                useContext() accepts a context object (the value returned from React.createContext) and returns the current context value for that context. The current context value is determined by the value prop of the nearest --- MyContext.Provider --- above the calling component in the tree.
+                useContext accepts a context object (the value returned from React.createContext) and returns the current context value for that context. The current context value is determined by the value prop of the nearest --- MyContext.Provider --- above the calling component in the tree.
                 </p>
             </article>
-            <article className='mb-10 border-2 border-red-400 rounded-xl p-10'>>
-                <h3 className='text-4xl mb-6'>How does useRef hook works?</h3>
+            <article className='mb-10 border-2 border-red-400 rounded-xl p-10'>
+                <h3 className='text-4xl mb-6'>How does useRef hook works? </h3>
                 <p>
                 useRef returns a mutable ref object whose .current property is initialized to the passed argument (initialValue). The returned object will persist for the full lifetime of the component.
                 <br />
